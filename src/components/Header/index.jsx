@@ -42,15 +42,7 @@ const Header = ({ theme, setTheme }) => {
           scrolled ? "scroll-header" : ""
         }`}
       >
-        <div className="w-full flex justify-between items-center container2 mx-auto">
-          <a href="/" className="inline-block">
-            <img
-              src={LotusLogo}
-              alt="Lotus Arts"
-              className="w-16 h-16 max-sm:w-12 max-sm:h-12"
-            />
-          </a>
-
+        <div className="w-full flex justify-end items-center container2 mx-auto">
           <div className="flex items-center gap-2">
             <ul className="list-none hidden md:flex flex-row gap-10">
               <li className={`font-medium cursor-pointer`}>

@@ -59,7 +59,7 @@ const Modal = ({ isOpen, setIsOpen, modalData }) => {
                   target="_blank"
                   className="px-4 py-2 bg-[#2ca344] rounded-lg w-fit"
                 >
-                  Details
+                  Play
                 </a>
               ) : (
                 ""
