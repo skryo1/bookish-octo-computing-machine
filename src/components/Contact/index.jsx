@@ -19,7 +19,7 @@ const Contact = () => {
         CONTACT US
       </h2>
       <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">
-        <div className="shadow-[rgba(0,_0,_0,_0.2)_0px_9px_20px] mt-10 p-8 rounded-2xl">
+        <div className="shadow-[rgba(0,_0,_0,_0.2)_0px_9px_20px] mt-10 py-8 px-6 max-sm:px-4 rounded-2xl">
           <div className="flex justify-between items-center">
             <p className="opacity-50 font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]">
               Get in touch

@@ -1,5 +1,6 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import PlaceholderImage from "../../assets/placeholder.jpg";
 
 const Modal = ({ isOpen, setIsOpen, modalData }) => {
   return (
@@ -26,11 +27,19 @@ const Modal = ({ isOpen, setIsOpen, modalData }) => {
             </button>
             <div className="flex flex-col gap-4">
               <div className="flex max-sm:flex-col items-center">
-                <img
-                  src={modalData?.image}
-                  alt=""
-                  className="w-28 h-28 object-cover rounded-lg"
-                />
+                {modalData?.image !== undefined && modalData?.image !== "" ? (
+                  <img
+                    src={modalData?.image}
+                    alt=""
+                    className="w-28 h-28 object-cover rounded-lg"
+                  />
+                ) : (
+                  <img
+                    src={PlaceholderImage}
+                    alt=""
+                    className="w-28 h-28 object-cover rounded-lg"
+                  />
+                )}
                 <h2 className="text-[1.5rem] py-[16px] px-[24px]">
                   {modalData?.title}
                 </h2>
