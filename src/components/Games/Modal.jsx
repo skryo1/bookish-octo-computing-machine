@@ -1,8 +1,7 @@
-import React, { Fragment, useState } from "react";
+import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
 const Modal = ({ isOpen, setIsOpen, modalData }) => {
-  console.log(modalData);
   return (
     <Transition
       show={isOpen}
