@@ -36,18 +36,18 @@ const ContactForm = ({ contact }) => {
           value={form.name}
           onChange={handleChange}
           placeholder="What's your good name?"
-          className="contact-input py-4 px-6 rounded-lg outline-none border-none font-medium"
+          className="contact-input bg-transparent border-2 border-[#4abe611a] py-4 px-6 rounded-lg outline-none font-medium"
         />
       </label>
       <label className="flex flex-col">
-        <span className="font-medium mb-4">Your email</span>
+        <span className="font-medium mb-4">Your Email</span>
         <input
           type="email"
           name="email"
           value={form.email}
           onChange={handleChange}
           placeholder="What's your web address?"
-          className="contact-input py-4 px-6 rounded-lg outline-none border-none font-medium"
+          className="contact-input bg-transparent border-2 border-[#4abe611a] py-4 px-6 rounded-lg outline-none font-medium"
         />
       </label>
       <label className="flex flex-col">
@@ -58,13 +58,13 @@ const ContactForm = ({ contact }) => {
           value={form.message}
           onChange={handleChange}
           placeholder="What you want to say?"
-          className="contact-input py-4 px-6 resize-none rounded-lg outline-none border-none font-medium"
+          className="contact-input bg-transparent border-2 border-[#4abe611a] py-4 px-6 resize-none rounded-lg outline-none font-medium"
         />
       </label>
 
       <button
         type="submit"
-        className="contact-button py-3 px-8 rounded-xl outline-none w-fit font-bold shadow-md"
+        className="contact-button text-white transition-all ease-in duration-200 bg-[#2a863c] hover:bg-[#1e7930] py-3 px-8 rounded-xl outline-none w-fit font-bold shadow-md"
       >
         Send
       </button>

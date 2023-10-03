@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
 const Modal = ({ isOpen, setIsOpen, modalData }) => {
@@ -11,13 +11,9 @@ const Modal = ({ isOpen, setIsOpen, modalData }) => {
       leave="transition duration-75 ease-out"
       leaveFrom="transform scale-100 opacity-100"
       leaveTo="transform scale-95 opacity-0"
-      //   as={Fragment}
+      // as={Fragment}
     >
-      <Dialog
-        open={isOpen}
-        onClose={() => setIsOpen(false)}
-        className="relative z-[10000]"
-      >
+      <Dialog onClose={() => setIsOpen(false)} className="relative z-[10000]">
         {/* The backdrop, rendered as a fixed sibling to the panel container */}
         <div className="fixed inset-0 bg-black/50" aria-hidden="true" />
         <div className="fixed inset-0 flex w-screen overflow-y-auto items-center justify-center p-4">
@@ -47,13 +43,18 @@ const Modal = ({ isOpen, setIsOpen, modalData }) => {
                   </p>
                 </h5>
               </div>
-              <a
-                href={modalData?.buttonLink}
-                target="_blank"
-                className="px-4 py-2 bg-red-500 rounded-lg w-fit"
-              >
-                Details
-              </a>
+              {modalData?.buttonLink !== undefined &&
+              modalData?.buttonLink !== "" ? (
+                <a
+                  href={modalData?.buttonLink}
+                  target="_blank"
+                  className="px-4 py-2 bg-[#2ca344] rounded-lg w-fit"
+                >
+                  Details
+                </a>
+              ) : (
+                ""
+              )}
             </div>
           </Dialog.Panel>
         </div>

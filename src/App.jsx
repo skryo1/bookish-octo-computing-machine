@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { Header } from "./components";
+import { Footer, Header } from "./components";
 import HomePage from "./pages/HomePage";
 import Aos from "aos";
 import { Route, Routes } from "react-router-dom";
@@ -32,6 +32,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
       </Routes>
+      <Footer />
     </div>
   );
 };
