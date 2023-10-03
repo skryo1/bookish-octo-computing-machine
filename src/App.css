@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  list-style: none;
+}
+
+:root {
+  --primary-color: #2ca344;
+  --bg-color: #0a0a0a;
+  --text-color: rgba(255, 255, 255, 0.92);
+  --title-color: #1a202c;
+  --box-bg-color: rgba(255, 255, 255, 0.02);
+  --contact-bg-hover: rgba(129, 230, 217, 0.12);
+}
+
+/*LIGHT THEME*/
+.light-theme {
+  --primary-color: #278f3c;
+  --bg-color: rgb(240, 231, 219);
+  --text-color: #1a202c;
+  --title-color: #ffffffeb;
+  --box-bg-color: rgba(255, 255, 255, 0.267);
+  --contact-bg-hover: #e6fffa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-family: "Poppins", sans-serif;
+}
+
+.container2 {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .container2 {
+    max-width: 900px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .container2 {
+    max-width: 750px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container2 {
+    max-width: 650px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container2 {
+    max-width: 550px;
+  }
+}

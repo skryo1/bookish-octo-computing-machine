@@ -1,0 +1,26 @@
+import React from "react";
+import { Truncate } from "../../utils/TruncateText";
+
+const Item = ({ game }) => {
+  return (
+    <div className="h-72 w-full">
+      <img
+        src={game.image}
+        alt={game.title}
+        className="w-full h-full object-cover rounded-lg"
+      />
+      <div className="transition-all ease-in duration-200 w-full h-full bg-[#000] rounded-lg bg-opacity-70 absolute top-0 left-0 z-[5] opacity-0 group-hover:opacity-100">
+        <div className="w-full h-full flex flex-col items-center justify-center">
+          <p className="px-4 select-none text-white">
+            {Truncate(game.details, 300)}
+          </p>
+          <button className="mt-2 text-white bg-[#2ca344] hover:bg-[#18882e] py-2 px-4 rounded-lg font-normal ease-in duration-200">
+            See Details
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Item;

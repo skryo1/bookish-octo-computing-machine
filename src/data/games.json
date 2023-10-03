@@ -1,0 +1,32 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "title": "game1",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in hendrerit enim. Morbi vel felis at orci tincidunt aliquet rutrum eu ante. Sed pellentesque consequat nisi et bibendum. Etiam in cursus purus. Morbi vel dolor justo. Curabitur sodales odio lacus, ut varius mi rutrum nec. Etiam placerat egestas aliquam. In est leo, posuere sed lorem quis, tincidunt finibus erat. Integer a urna vel odio convallis pulvinar vitae ac sem.",
+      "image": "./src/assets/games/placeholder.jpg",
+      "buttonLink": "http://localhost:5173"
+    },
+    {
+      "id": 2,
+      "title": "game2",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in hendrerit enim. Morbi vel felis at orci tincidunt aliquet rutrum eu ante. Sed pellentesque consequat nisi et bibendum. Etiam in cursus purus. Morbi vel dolor justo. Curabitur sodales odio lacus, ut varius mi rutrum nec. Etiam placerat egestas aliquam. In est leo, posuere sed lorem quis, tincidunt finibus erat. Integer a urna vel odio convallis pulvinar vitae ac sem.",
+      "image": "./src/assets/games/bg.png",
+      "buttonLink": "http://localhost:5173"
+    },
+    {
+      "id": 3,
+      "title": "game3",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in hendrerit enim. Morbi vel felis at orci tincidunt aliquet rutrum eu ante. Sed pellentesque consequat nisi et bibendum. Etiam in cursus purus. Morbi vel dolor justo. Curabitur sodales odio lacus, ut varius mi rutrum nec. Etiam placerat egestas aliquam. In est leo, posuere sed lorem quis, tincidunt finibus erat. Integer a urna vel odio convallis pulvinar vitae ac sem.",
+      "image": "./src/assets/games/logo.png",
+      "buttonLink": "http://localhost:5173"
+    },
+    {
+        "id": 4,
+        "title": "game4",
+        "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in hendrerit enim. Morbi vel felis at orci tincidunt aliquet rutrum eu ante. Sed pellentesque consequat nisi et bibendum. Etiam in cursus purus. Morbi vel dolor justo. Curabitur sodales odio lacus, ut varius mi rutrum nec. Etiam placerat egestas aliquam. In est leo, posuere sed lorem quis, tincidunt finibus erat. Integer a urna vel odio convallis pulvinar vitae ac sem.",
+        "image": "./src/assets/games/placeholder.jpg",
+        "buttonLink": "http://localhost:5173"
+      }
+  ]
+}
