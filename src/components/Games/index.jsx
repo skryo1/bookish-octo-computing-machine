@@ -1,16 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GamesData from "../../data/games.json";
 import Item from "./Item";
 import Modal from "./Modal";
+import axios from "axios";
 
 const Games = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [modalData, setModalData] = useState();
+  const [universeData, setUniverseData] = useState();
+
+  const getUniverseInfo = async (id) => {
+    await axios
+      .get(`http://localhost:3000/getUniverseInfo/${id}`)
+      .then((res) => {
+        setUniverseData(res.data[0]);
+      });
+  };
+
+  useEffect(() => {
+    getUniverseInfo(GamesData.universeId);
+  }, []);
 
   return (
     <section
       id="games"
-      data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500"
+      data-aos="fade-up"
+      data-aos-delay="100"
+      data-aos-duration="1500"
       className="pt-[280px] max-sm:pt-[320px] container2 pb-40 px-10"
     >
       <h2 className="flex [text-shadow:_1px_2px_2px_rgb(0_0_0_/_50%)] items-center justify-center text-4xl max-sm:text-2xl mt-4">
@@ -29,7 +45,7 @@ const Games = () => {
         >
           <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
         </svg>
-        {"hi"})
+        {universeData?.playing})
       </h2>
       <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-x-4 gap-y-8 mt-10">
         {GamesData?.games.map((game) => (
