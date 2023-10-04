@@ -5,9 +5,6 @@ import PlaceholderImage from '../../assets/placeholder.jpg'
 const Item = ({ game }) => {
   // Define the URL you want to link to
 
-  https://games.roblox.com/v1/games?universeIds=4967899845
-
-
   return (
     <div className="h-72 w-full">
       {game?.image !== undefined && game?.image !== "" ? (
