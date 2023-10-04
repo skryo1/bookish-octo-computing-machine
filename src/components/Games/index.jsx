@@ -31,7 +31,7 @@ const Games = () => {
         </svg>
         {"hi"})
       </h2>
-      <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-x-4 gap-y-8 mt-10">
+      <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-x-2 gap-y-8 mt-10">
         {GamesData?.games.map((game) => (
           <div key={game.id} className="group relative z-[1]">
             <Item
