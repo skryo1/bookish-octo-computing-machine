@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import GamesData from "../../data/games.json";
 import Item from "./Item";
 import Modal from "./Modal";
+import axios from "redaxios";
 
 const Games = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,7 @@ const Games = () => {
   const [universeData, setUniverseData] = useState();
 
   const getUniverseInfo = async (id) => {
-    await fetch
+    await axios
       .get(`http://localhost:3000/getUniverseInfo/${id}`)
       .then((res) => {
         setUniverseData(res.data[0]);
