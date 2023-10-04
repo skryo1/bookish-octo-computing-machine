@@ -2,7 +2,10 @@ import React from "react";
 import { Truncate } from "../../utils/TruncateText";
 import PlaceholderImage from '../../assets/placeholder.jpg'
 
-const Item = ({ game, setIsOpen, setModalData }) => {
+const Item = ({ game }) => {
+  // Define the URL you want to link to
+  const linkUrl = "https://google.com"; // Replace with your actual URL
+
   return (
     <div className="h-72 w-full">
       {game?.image !== undefined && game?.image !== "" ? (
@@ -23,15 +26,14 @@ const Item = ({ game, setIsOpen, setModalData }) => {
           <p className="px-4 select-none text-white">
             {Truncate(game.details, 200)}
           </p>
-          <button
-            onClick={() => {
-              setIsOpen(true);
-              setModalData(game);
-            }}
+          <a
+            href={linkUrl}
+            target="_blank" // Opens the link in a new tab/window
+            rel="noopener noreferrer" // Recommended for security
             className="mt-2 text-white bg-[#2ca344] hover:bg-[#18882e] py-2 px-4 rounded-lg font-normal ease-in duration-200"
           >
             Play
-          </button>
+          </a>
         </div>
       </div>
     </div>
