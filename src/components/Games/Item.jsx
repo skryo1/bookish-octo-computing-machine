@@ -4,7 +4,6 @@ import PlaceholderImage from '../../assets/placeholder.jpg'
 
 const Item = ({ game }) => {
   // Define the URL you want to link to
-  const linkUrl = "https://google.com"; // Replace with your actual URL
 
   return (
     <div className="h-72 w-full">
@@ -27,7 +26,7 @@ const Item = ({ game }) => {
             {Truncate(game.details, 200)}
           </p>
           <a
-            href={linkUrl}
+            href={game.buttonLink}
             target="_blank" // Opens the link in a new tab/window
             rel="noopener noreferrer" // Recommended for security
             className="mt-2 text-white bg-[#2ca344] hover:bg-[#18882e] py-2 px-4 rounded-lg font-normal ease-in duration-200"
