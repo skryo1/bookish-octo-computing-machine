@@ -7,6 +7,11 @@ const Games = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [modalData, setModalData] = useState();
 
+  const squareStyle = {
+    width: "200px", // Adjust this value to set the width of the square items
+    height: "200px", // Set the same value as width to make it square
+  };
+
   return (
     <section
       id="games"
@@ -33,7 +38,11 @@ const Games = () => {
       </h2>
       <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-x-2 gap-y-8 mt-10">
         {GamesData?.games.map((game) => (
-          <div key={game.id} className="group relative z-[1]">
+          <div
+            key={game.id}
+            className="group relative z-[1]"
+            style={squareStyle} // Apply inline styles for square aspect ratio
+          >
             <Item
               game={game}
               setIsOpen={setIsOpen}
