@@ -11,7 +11,7 @@ const Games = () => {
     <section
       id="games"
       data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500"
-      className="pt-[280px] max-sm:pt-[320px] container2 pb-40 px-10"
+      className="pt-[280px] max-sm:pt-[280px] container2 pb-40 px-10"
     >
       <h2 className="flex [text-shadow:_1px_2px_2px_rgb(0_0_0_/_50%)] items-center justify-center text-4xl max-sm:text-2xl mt-4">
         OUR GAMES (
