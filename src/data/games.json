@@ -10,21 +10,7 @@
     {
       "id": 2,
       "title": "Become a painter tycoon",
-      "details": "Become a Painter",
-      "image": "./games/PainterTycoonIcon.png",
-      "buttonLink": "https://www.roblox.com/games/13304142180/become-a-painter-and-prove-mom-wrong-tycoon"
-    },
-    {
-      "id": 3,
-      "title": "Bfecome a painter tycoon",
-      "details": "Become a Painter",
-      "image": "./games/PainterTycoonIcon.png",
-      "buttonLink": "https://www.roblox.com/games/13304142180/become-a-painter-and-prove-mom-wrong-tycoon"
-    },
-    {
-      "id": 4,
-      "title": "Begcome a painter tycoon",
-      "details": "Become a Painter",
+      "details": "Become a Painter tycoon",
       "image": "./games/PainterTycoonIcon.png",
       "buttonLink": "https://www.roblox.com/games/13304142180/become-a-painter-and-prove-mom-wrong-tycoon"
     }
