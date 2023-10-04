@@ -8,13 +8,13 @@ const Item = ({ game, setIsOpen, setModalData }) => {
       {game?.image !== undefined && game?.image !== "" ? (
         <img
           src={game.image}
-          alt={game.title}
+          alt={game.buttonLink}
           className="w-full h-full object-cover rounded-lg"
         />
       ) : (
         <img
           src={PlaceholderImage}
-          alt={game.title}
+          alt={game.buttonLink}
           className="w-full h-full object-cover rounded-lg"
         />
       )}
@@ -30,7 +30,7 @@ const Item = ({ game, setIsOpen, setModalData }) => {
             }}
             className="mt-2 text-white bg-[#2ca344] hover:bg-[#18882e] py-2 px-4 rounded-lg font-normal ease-in duration-200"
           >
-            See Details
+            Play
           </button>
         </div>
       </div>
