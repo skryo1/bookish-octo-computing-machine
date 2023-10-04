@@ -27,7 +27,7 @@ const App = () => {
   }, [theme]);
 
   return (
-    <div className='bg-[url("./assets/bg.png")] h-screen bg-center bg-no-repeat'>
+    <div className='bg-[url("./assets/bg.png")] h-screen bg-center bg-no-repeat bg-cover'>
       <Header theme={theme} setTheme={setTheme} />
       <Routes>
         <Route path="/" element={<HomePage />} />
