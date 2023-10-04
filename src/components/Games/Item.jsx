@@ -6,7 +6,7 @@ const Item = ({ game }) => {
   // Define the URL you want to link to
 
   return (
-    <div className="h-72 w-full">
+    <div className="h-72 w-72">
       {game?.image !== undefined && game?.image !== "" ? (
         <img
           src={game.image}
