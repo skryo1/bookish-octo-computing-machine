@@ -34,7 +34,7 @@ const Header = ({ theme, setTheme }) => {
   }, []);
 
   return (
-    <header className="h-[75px]">
+    <header className="h-[75px] w-[75px]">
       {/* MAIN HEADER */}
 
       <nav
