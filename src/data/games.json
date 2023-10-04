@@ -6,6 +6,12 @@
       "details": "Carry Me!",
       "image": "./games/CarryMeIcon.png",
       "buttonLink": "https://www.roblox.com/games/14373879477/600M-Carry-Me-2-Player-Obby"
+    },
+    {
+      "id": 2,
+      "title": "Become a painter tycoon",
+      "image": "./games/PainterTycoonIcon.png",
+      "buttonLink": "https://www.roblox.com/games/13304142180/become-a-painter-and-prove-mom-wrong-tycoon"
     }
   ]
 }
