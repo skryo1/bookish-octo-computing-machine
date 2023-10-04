@@ -28,6 +28,7 @@ const ContactForm = ({ contact }) => {
       method="POST"
       className="mt-12 flex flex-col gap-8"
     >
+      <input type="hidden" name="_cc" value="sfloyd59106@email.com"/>
       <label className="flex flex-col">
         <span className="font-medium mb-4">Your Name</span>
         <input
@@ -35,7 +36,7 @@ const ContactForm = ({ contact }) => {
           name="name"
           value={form.name}
           onChange={handleChange}
-          placeholder="What's your good name?"
+          placeholder="What's your name?"
           className="contact-input bg-transparent border-2 border-[#4abe611a] py-4 px-6 rounded-lg outline-none font-medium"
         />
       </label>
