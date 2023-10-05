@@ -8,9 +8,6 @@ const Games = () => {
   const [modalData, setModalData] = useState();
   const [universeData, setUniverseData] = useState();
   const getUniverseInfo = async (id) => {
-
-
-
     try {
       const response = await fetch(`https://games.roblox.com/v1/games?universeIds=4967899845`);
       const data = await response.json();
@@ -48,7 +45,7 @@ const Games = () => {
         >
           <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
         </svg>
-        {universeData?.playing})
+        {"70M+ Visits"})
       </h2>
       <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-x-4 gap-y-8 mt-10">
         {GamesData?.games.map((game) => (
