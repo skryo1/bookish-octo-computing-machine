@@ -9,11 +9,17 @@ const Games = () => {
   const [universeData, setUniverseData] = useState();
 
   const getUniverseInfo = async (id) => {
-    await fetch
-      .get(`https://games.roblox.com/docs/json/v2/games/${id}/media`)
-      .then((res) => {
-        setUniverseData(res.data[0]);
-      });
+    try {
+      const response = await fetch(`http://localhost:3000/getUniverseInfo/${id}`);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+  
+      const data = await response.json();
+      setUniverseData(data[0]);
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
   useEffect(() => {
