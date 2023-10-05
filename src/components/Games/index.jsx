@@ -7,14 +7,12 @@ const Games = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [modalData, setModalData] = useState();
   const [universeData, setUniverseData] = useState();
-
   const getUniverseInfo = async (id) => {
+
+
+
     try {
-      const response = await fetch(`http://localhost:3000/getUniverseInfo/${id}`);
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-  
+      const response = await fetch(`https://games.roblox.com/v1/games?universeIds=4967899845`);
       const data = await response.json();
       setUniverseData(data[0]);
     } catch (error) {
