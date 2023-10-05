@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import GamesData from "../../data/games.json";
 import Item from "./Item";
 import Modal from "./Modal";
-import axios from "redaxios";
 
 const Games = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,8 +9,8 @@ const Games = () => {
   const [universeData, setUniverseData] = useState();
 
   const getUniverseInfo = async (id) => {
-    await axios
-      .get(`http://localhost:3000/getUniverseInfo/${id}`)
+    await fetch
+      .get(`https://games.roblox.com/docs/json/v2/games/${id}/media`)
       .then((res) => {
         setUniverseData(res.data[0]);
       });
