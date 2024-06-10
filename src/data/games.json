@@ -15,6 +15,14 @@
       "image": "./games/PainterTycoonIcon.png",
       "buttonLink": "https://www.roblox.com/games/13304142180/become-a-painter-and-prove-mom-wrong-tycoon",
       "universeId": 4967899845
+    },
+    {
+      "id": 3,
+      "title": "Become a painter tycoon",
+      "details": "Become a Painter tycoon",
+      "image": "./games/PainterTycoonIcon.png",
+      "buttonLink": "https://www.roblox.com/games/13304142180/become-a-painter-and-prove-mom-wrong-tycoon",
+      "universeId": 4967899845
     }
   ]
 }
