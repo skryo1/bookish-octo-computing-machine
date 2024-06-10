@@ -6,19 +6,31 @@ import Modal from "./Modal";
 const Games = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [modalData, setModalData] = useState();
-  const [universeData, setUniverseData] = useState();
+  const [totalVisits, setTotalVisits] = useState(0);
+
   const getUniverseInfo = async (id) => {
     try {
-      const response = await fetch(`https://games.roblox.com/v1/games?universeIds=4967899845`);
+      const response = await fetch(`https://games.roblox.com/v1/games?universeIds=${id}`);
       const data = await response.json();
-      setUniverseData(data[0]);
+      return data.data[0];
     } catch (error) {
       console.error('Error:', error);
     }
   };
 
   useEffect(() => {
-    getUniverseInfo(GamesData.universeId);
+    const fetchVisits = async () => {
+      let total = 0;
+      for (const game of GamesData.games) {
+        const gameData = await getUniverseInfo(game.universeId);
+        if (gameData) {
+          total += gameData.visits;
+        }
+      }
+      setTotalVisits(total);
+    };
+
+    fetchVisits();
   }, []);
 
   return (
@@ -45,7 +57,7 @@ const Games = () => {
         >
           <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
         </svg>
-        {"70M+ Visits"})
+        {`${(totalVisits / 1_000_000).toFixed(1)}M+ Visits`})
       </h2>
       <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-x-4 gap-y-8 mt-10">
         {GamesData?.games.map((game) => (
