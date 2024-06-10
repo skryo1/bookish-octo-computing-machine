@@ -10,7 +10,7 @@ const Games = () => {
 
   const getUniverseInfo = async (id) => {
     try {
-      const response = await fetch(`https://games.roblox.com/v1/games?universeIds=${id}`);
+      const response = await fetch(`https://games.roproxy.com/v1/games?universeIds=${id}`);
       const data = await response.json();
       return data.data[0];
     } catch (error) {
@@ -30,14 +30,7 @@ const Games = () => {
       setTotalVisits(total);
     };
 
-    // Initial fetch
     fetchVisits();
-
-    // Set interval to update every 60 seconds
-    const intervalId = setInterval(fetchVisits, 60000);
-
-    // Cleanup interval on component unmount
-    return () => clearInterval(intervalId);
   }, []);
 
   return (
