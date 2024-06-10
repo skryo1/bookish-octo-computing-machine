@@ -18,11 +18,19 @@
     },
     {
       "id": 3,
-      "title": "Becofffr tycoon",
-      "details": "Become a Painter tycoon",
-      "image": "./games/PainterTycoonIcon.png",
-      "buttonLink": "https://www.roblox.com/games/13304142180/become-a-painter-and-prove-mom-wrong-tycoon",
-      "universeId": 4967899845
+      "title": "Wacky Rails",
+      "details": "Wacky Rails",
+      "image": "./games/WackyRailsIcon.png",
+      "buttonLink": "https://www.roblox.com/games/15589649575/Wacky-Rails-2-Player-Cart-Ride",
+      "universeId": 5382471925
+    },
+    {
+      "id": 4,
+      "title": "Trespasser",
+      "details": "Trespasser",
+      "image": "./games/TrespasserIcon.png",
+      "buttonLink": "https://www.roblox.com/games/17352249555/MAP-2-Trespasser",
+      "universeId": 5937860488
     }
   ]
 }
