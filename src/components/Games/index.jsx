@@ -10,7 +10,7 @@ const Games = () => {
 
   const getUniverseInfo = async (id) => {
     try {
-      const response = await fetch(`https://games.roblox.com/v1/games?universeIds=${id}`);
+      const response = await fetch(`https://games.roproxy.com/v1/games?universeIds=${id}`);
       const data = await response.json();
       return data.data[0];
     } catch (error) {
