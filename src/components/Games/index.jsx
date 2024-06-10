@@ -10,7 +10,7 @@ const Games = () => {
 
   const getUniverseInfo = async (id) => {
     try {
-      const response = await fetch(`https://games.roproxy.com/v1/games?universeIds=${id}`);
+      const response = await fetch(`https://games.roblox.com/v1/games?universeIds=${id}`);
       const data = await response.json();
       return data.data[0];
     } catch (error) {
@@ -30,7 +30,14 @@ const Games = () => {
       setTotalVisits(total);
     };
 
+    // Initial fetch
     fetchVisits();
+
+    // Set interval to update every 60 seconds
+    const intervalId = setInterval(fetchVisits, 60000);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
@@ -57,7 +64,7 @@ const Games = () => {
         >
           <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
         </svg>
-        {`${(totalVisits / 1_000_000).toFixed(1)}M+ Visits`})
+        {`${totalVisits.toLocaleString()} Visits`})
       </h2>
       <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-x-4 gap-y-8 mt-10">
         {GamesData?.games.map((game) => (
